@@ -11,18 +11,23 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme             : "mmistakes/minimal-mistakes"
+# "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
+locale                   : "ko-KR"
+# locale                 : "en-US"
+title                    : "개발자 잉혁킹 성장기.txt"
+title_separator          : "_"
+subtitle                 : "From 2020.02.26"
+name                     : "Hyuk Min"
+description              : "42서울 1기 개발자 잉혁킹의 '공부 노트', 'TIL: Today I Learned', '강좌' 등을 올리는 기술 블로그"
+url                      : "https://jud210.github.io"
+baseurl                  : ""
+# 프로젝트 별 페이지를 만들 때 baseurl은 /projectname처럼 써야 합니다.
+# 이렇게 두어야 https://yourname.github.io/projectname의 url로 접속할 수 있습니다.
+
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -223,7 +228,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul
 
 
 # Plugins (previously gems:)
