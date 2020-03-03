@@ -1,7 +1,7 @@
 ---
 title: "[TIL #1] WSL 설치, VS Code 개발 환경 세팅"
 date: 2020-02-26 23:22:48 +0900
-categories: TIL 42seoul
+categories: TIL 42Seoul
 ---
 
 # 학습 레포트 (Today I Learned)

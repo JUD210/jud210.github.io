@@ -1,7 +1,7 @@
 ---
 title: "[TIL #3] BOJ 문제풀이 시작, 42서울 libft 과제 시작"
 date: 2020-02-27 13:17:28 +0900
-categories: TIL 42seoul
+categories: TIL 42Seoul
 ---
 
 # 학습 레포트 (Today I Learned)

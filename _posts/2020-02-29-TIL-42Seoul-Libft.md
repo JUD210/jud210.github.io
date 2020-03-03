@@ -1,7 +1,7 @@
 ---
 title: "[TIL #6] 42서울: libft"
 date: 2020-03-01 02:32:05 +0900
-categories: TIL 42seoul
+categories: TIL 42Seoul
 ---
 
 # 학습 레포트 (Today I Learned)

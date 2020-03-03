@@ -1,7 +1,7 @@
 ---
 title: "[TIL #4] BOJ: Tetromino, 42서울: libft"
 date: 2020-02-28 01:47:40 +0900
-categories: TIL 42seoul
+categories: TIL 42Seoul
 ---
 
 # 학습 레포트 (Today I Learned)
