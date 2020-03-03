@@ -28,7 +28,28 @@ baseurl                  : ""
 # 프로젝트 별 페이지를 만들 때 baseurl은 /projectname처럼 써야 합니다.
 # 이렇게 두어야 https://yourname.github.io/projectname의 url로 접속할 수 있습니다.
 
-# repository               : "jud210/my_blog"
+# repository             : "jud210/my_blog"
+
+################################################################################
+# https://jud210.github.io/my_blog/
+# ==
+# hyuk.kr
+# (CNAME file content: hyuk.kr)
+#
+################################################################################
+# http://hyuk.kr/main_category/sub_category/sub_sub_category/first-post/
+# ==
+# https://jud210.github.io/my_blog/main_category/sub_category/sub_sub_category/first-post/
+#
+################################################################################
+# hosting.kr name server settings
+#
+# No. | Sub Domain | Domain Name | Record Type   | IP / Record     | Priority
+# 1   | www        | hyuk.kr     | 별칭(CNAME)   | hyuk.kr         | 2
+# 2   |            | hyuk.kr     | 서브도메인(A) | 185.199.108.153 | 1
+#
+################################################################################
+
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
