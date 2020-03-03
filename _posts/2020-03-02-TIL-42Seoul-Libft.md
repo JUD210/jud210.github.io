@@ -15,9 +15,11 @@ categories: TIL 42seoul
 > 14:00 ~ 23:00 (집)
 
 - [ 개인 스케쥴러: Life RPG Ignition (Season 3) ]\
+
   ☞ <https://goo.gl/qnehEQ>
 
-- [ 오늘 하루는? - 일일 영상 리뷰]\
+- [ 오늘 하루는? - 일일 영상 리뷰]
+
   ☞ <https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg>
 
 ## 3. 학습 범위 및 주제
@@ -72,13 +74,13 @@ categories: TIL 42seoul
 
 ```
 
-![ft_lstadd_front](./img/ft_lstadd_front.png)
+![ft_lstadd_front](/assets/images/posts/ft_lstadd_front.png)
 
 연결리스트 구조를 이해하기 어려워, 직접 그림으로 그린 모습.
 
 - 나와 같이 공부하던 동료에게 그나마 내가 아는 정보라도 설명하기 위해 그리기 시작한 그림인데, 오히려 그리고 설명하다 보니 내가 헷갈려 하던 포인터/리스트 관련 개념들이 깔끔하게 이해되었다.
 
-![ft_lstclear](./img/ft_lstclear.png)
+![ft_lstclear](/assets/images/posts/ft_lstclear.png)
 
 아래 함수를 테스트 프로그램에 돌리면 KO가 뜨는 이유에 대해 고민하던 모습.
 
@@ -90,7 +92,7 @@ categories: TIL 42seoul
 - 아침 8시 반이 조금 넘어서 잠들었지만, 12시 반쯤 또 칼같이 기상하였다. 연결리스트가 너무 풀고 싶었기 때문이다.
 - 아마 그렇게 재미없어 하고 관심없어 하던 자료구조 공부를 즐기게 된 건, 아무래도 친한 동료에게 좀 더 깔끔하고 쉽게 내가 이해한 것들을 가르쳐주고 나눠주고 싶은 마음이 강하게 작용한 것 같다.
 - 뭐, 그리고 원래 엄청 어렵고 막막하던 게 쫙쫙 풀리면 기분이 좋지 않은가? 그런 것도 있을테고. libft를 끝까지 다 풀고 OK가 촤라락 떴을 때의 쾌감이란 ㅋㅋ
-- ![libft_all_pass](./img/libft_all_pass.png)
+- ![libft_all_pass](/assets/images/posts/libft_all_pass.png)
 
 - 하여튼 잠도 제대로 안 자고 빡세게 달렸는데, 오늘은 일찍 끝내고 빨리 영상 찍고 자야겠다. 매일 영상 찍는 습관은 내가 죽을 때까지 단 하루라도 빼먹을 수 없다.
 

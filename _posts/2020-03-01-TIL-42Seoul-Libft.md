@@ -15,9 +15,11 @@ categories: TIL 42seoul
 > 11:00 ~ 03:00 (집)
 
 - [ 개인 스케쥴러: Life RPG Ignition (Season 3) ]\
+
   ☞ <https://goo.gl/qnehEQ>
 
-- [ 오늘 하루는? - 일일 영상 리뷰]\
+- [ 오늘 하루는? - 일일 영상 리뷰]
+
   ☞ <https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg>
 
 ## 3. 학습 범위 및 주제
@@ -81,7 +83,7 @@ categories: TIL 42seoul
 
 ```
 
-![old_lstadd_front](./img/old_lstadd_front.png)
+![old_lstadd_front](/assets/images/posts/old_lstadd_front.png)
 
 ## 8. 학습 내용에 대한 개인적인 총평 (최소 5줄 이상)
 

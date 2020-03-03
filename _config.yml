@@ -16,8 +16,8 @@ remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark"
 
 # Site Settings
-locale                   : "ko-KR"
-# locale                 : "en-US"
+# locale                   : "ko-KR"
+locale                 : "en-US"
 title                    : "개발자_잉혁킹_성장기.blog"
 title_separator          : "_"
 subtitle                 : "Since 2020.02.26"
