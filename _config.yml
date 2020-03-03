@@ -19,7 +19,7 @@ minimal_mistakes_skin    : "dark"
 locale                   : "ko-KR"
 # locale                 : "en-US"
 title                    : "개발자_잉혁킹_성장기.blog"
-title_separator          : "|"
+title_separator          : "_"
 subtitle                 : "Since 2020.02.26"
 name                     : "Hyuk Min"
 description              : "42서울 1기 개발자 잉혁킹의 '공부 노트', 'TIL: Today I Learned', '강좌' 등을 올리는 기술 블로그"
@@ -57,16 +57,19 @@ masthead_title           : # overrides the website title displayed in the masthe
 words_per_minute         : 200
 comments:
   # provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  provider               : "facebook"
+  provider               : "disqus"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : 'hyuk'
+    # 참고
+    # https://inasie.github.io/it%EC%9D%BC%EB%B0%98/2/
+    # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
-    https://developers.facebook.com/docs/plugins/comments
+    # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : 10
-    colorscheme          : "dark"
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
@@ -317,8 +320,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
-
-theme: jekyll-theme-cayman
