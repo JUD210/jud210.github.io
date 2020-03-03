@@ -59,7 +59,7 @@ comments:
   # provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   provider               : "disqus"
   disqus:
-    shortname            : 'hyuk'
+    shortname            : "hyuk"
     # 참고
     # https://inasie.github.io/it%EC%9D%BC%EB%B0%98/2/
     # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
@@ -319,7 +319,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      # read_time: true
       comments: true
       share: true
       related: true
