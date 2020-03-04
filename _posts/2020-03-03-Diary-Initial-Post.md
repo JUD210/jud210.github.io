@@ -10,7 +10,7 @@ tags:
 categories:
   - Diary
 date: 2020-03-04 00:09:52 +0900
-last_modified_at: 2020-03-04 20:07:57 +0900
+last_modified_at: 2020-03-04 20:47:42 +0900
 ---
 
 GitHub Pages + Jekyll (minimal-mistakes) + hosting.kr  
@@ -18,17 +18,10 @@ GitHub Pages + Jekyll (minimal-mistakes) + hosting.kr
 
 예전부터 생각만 하다 말았던 일을 제대로 실행하니 아주 마음에 든다.
 
-```text
-제목: page.title
-마지막으로 수정된 시간: page.last_modified_at
-카테고리들: page.categories
-```
+![variable_ex1](/assets/images/posts/2020-03-03-Diary-Initial-Post/variable_ex1.png)
+![variable_ex2](/assets/images/posts/2020-03-03-Diary-Initial-Post/variable_ex2.png)
 
-제목: {{ page.title }}  
-마지막으로 수정된 시간: {{ page.last_modified_at }}  
-카테고리들: {{ page.categories }}
-
-위의 예시처럼, Jekyll Theme + Markdown을 활용하면 일반 블로그에서는 불가능한 수 많은 것들이 가능해진다! 개발자라면 한 번 도전해볼만 한 가치가 있지 않을까 싶다. 이제부터 차례차례 알아가며 적용해나갈 고급 기능들을 생각하니 벌써부터 흥분이 가라앉질 않는다.
+위의 예시처럼, Jekyll + Markdown을 활용하면 일반 블로그에서는 불가능한 수 많은 것들이 가능해진다! 개발자라면 한 번 도전해볼만 한 가치가 있지 않을까 싶다. 이제부터 차례차례 알아가며 적용해나갈 고급 기능들을 생각하니 벌써부터 흥분이 가라앉질 않는다.
 
 이제부터 블로그에 계속해서 많은 기능들을 추가함과 동시에, 매일마다 조금씩이나마 Today I Learned를 작성할 것이다. 다만, 현재 코로나 때문에 42서울 본과정을 집에서 진행중이기에, 매일마다 작성해야 하는 학습 레포트를, 당분간은 그대로 복사해서 올려야겠다.
 
