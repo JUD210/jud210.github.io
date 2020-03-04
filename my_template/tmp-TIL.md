@@ -8,8 +8,7 @@
 
 > 00:00 ~ 00:00 (집)
 
-- [ 개인 스케쥴러: Life RPG Ignition (Season 3) ]\
-  ☞ <https://goo.gl/qnehEQ>
+- [ 개인 스케쥴러: Life RPG Ignition (Season 3) ]    ☞ <https://goo.gl/qnehEQ>
 
 - [ 오늘 하루는? - 일일 영상 리뷰]\
   ☞ <https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg>
