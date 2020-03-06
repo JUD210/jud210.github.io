@@ -22,3 +22,33 @@ void recur(int depth, string str)
 }
 
 순열과 조합의 개념조차 헷갈리다니... 수학을 너무 오랫동안 등지고 있었나보다.
+
+
+
+
+
+int test_internal_free(char *s)
+{
+	free(s);
+}
+
+int main(void)
+{
+	int i;
+	char *s1;
+	char *s2;
+
+	s1 = malloc(4);
+	for (i = 0; i < 4; i++)
+	{
+		s1[i] = i + '0';
+	}
+	s1[i] = '\0';
+	printf("s1: %s\n", s1);
+		for (i = 0; i < 4; i++)
+	s2 = s1;
+	test_internal_free(s2);
+	printf("s1: %s\n", s1);
+
+	return (0);
+}
