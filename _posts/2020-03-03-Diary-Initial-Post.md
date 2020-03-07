@@ -18,8 +18,13 @@ GitHub Pages + Jekyll (minimal-mistakes) + hosting.kr
 
 예전부터 생각만 하다 말았던 일을 제대로 실행하니 아주 마음에 든다.
 
-![variable_ex1](/assets/images/posts/2020-03-03-Diary-Initial-Post/variable_ex1.png)
-![variable_ex2](/assets/images/posts/2020-03-03-Diary-Initial-Post/variable_ex2.png)
+[
+  ![variable_ex1](/assets/images/posts/2020-03-03-Diary-Initial-Post/variable_ex1.png)
+](/assets/images/posts/2020-03-03-Diary-Initial-Post/variable_ex1.png)
+
+[
+  ![variable_ex2](/assets/images/posts/2020-03-03-Diary-Initial-Post/variable_ex2.png)
+](/assets/images/posts/2020-03-03-Diary-Initial-Post/variable_ex2.png)
 
 위의 예시처럼, Jekyll + Markdown을 활용하면 일반 블로그에서는 불가능한 수 많은 것들이 가능해진다! 개발자라면 한 번 도전해볼만 한 가치가 있지 않을까 싶다. 이제부터 차례차례 알아가며 적용해나갈 고급 기능들을 생각하니 벌써부터 흥분이 가라앉질 않는다.
 
