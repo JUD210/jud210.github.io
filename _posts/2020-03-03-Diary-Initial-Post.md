@@ -12,8 +12,7 @@ categories:
 date: 2020-03-04 00:09:52 +0900
 last_modified_at: 2020-03-14 06:36:35 +0900
 ---
-GitHub Pages + Jekyll (minimal-mistakes) + hosting.kr  
-이 세가지를 활용하여 개인 블로그를 만들었다.
+{{ page.excerpt }}
 
 ## 2020-03-03 20:47:42 +0900
 

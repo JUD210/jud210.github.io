@@ -14,6 +14,8 @@ categories:
 date: 2020-03-14 04:44:26 +0900
 last_modified_at: 2020-03-14 04:44:27 +0900
 ---
+{{ page.excerpt }}
+
 ## 들어가기에 앞서
 
 이 글의 Markdown 코드는 **[여기서][gh-jud210-my_blog-this_post]** 자세히 볼 수 있다.  
