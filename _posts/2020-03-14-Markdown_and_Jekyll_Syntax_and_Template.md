@@ -9,46 +9,147 @@ tags:
   - hosting.kr
 categories:
   - Diary
-date: 2020-03-04 00:09:52 +0900
-last_modified_at: 2020-03-04 20:47:42 +0900
+date: 2020-03-14 03:18:32 +0900
+last_modified_at: 2020-03-14 03:18:35 +0900
 ---
 ## 들어가기에 앞서
 
-이 글의 Markdown 코드는 [여기서][gh-jud210-my_blog-this_post] 자세히 볼 수 있다.  
-또한, [이 글][devinlife-md]의 많은 부분을 참조했음을 미리 알린다.
+이 글의 Markdown 코드는 **[여기서][gh-jud210-my_blog-this_post]** 자세히 볼 수 있다.  
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+## 마크다운 문법
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+마크다운 문법은 **[이 블로그][devinlife-md]**에서 많은 부분 참고하여 정리했다.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+### 줄바꿈 (new line)
 
-코드 스니펫
+```md
+마크다운에서는 이런식으로
+써도 줄바꿈이 되지 않는다.
+
+줄 끝에 스페이스를 2번  
+붙여야 1칸 줄바꿈이 되고,
+
+이런식으로 완전히
+
+띄워써야 2칸 줄바꿈이 된다.
+```
+
+마크다운에서는 이런식으로
+써도 줄바꿈이 되지 않는다.
+
+줄 끝에 스페이스를 2번  
+붙여야 1칸 줄바꿈이 되고,
+
+이런식으로 완전히
+
+띄워써야 2칸 줄바꿈이 된다.
+
+### 강조 표시
+
+```md
+*기울이기*  
+_기울이기_  
+**굵게**  
+__굵게__  
+~~취소선~~
+```
+
+*기울이기*  
+_기울이기_  
+**굵게**  
+__굵게__  
+~~취소선~~
+
+### 글머리 (Header) 예시
+
+```md
+# H1 예시
+## H2 예시
+### H3 예시
+#### H4 예시
+##### H5 예시
+###### H6 예시
+```
+
+# H1 예시
+
+## H2 예시
+
+### H3 예시
+
+#### H4 예시
+
+##### H5 예시
+
+###### H6 예시
+
+### 코드 인용 (한 줄 짜리)
+
+```md
+`그냥 강조 표시로 사용하기도 함`
+```
+
+`그냥 강조 표시로 사용하기도 함`
+
+### 코드 인용
+
+~~~md
+```python
+def print_hi(name):
+  print("hello", name)
+print_hi('Tom')
+```
+~~~
 
 ```python
-# test
 def print_hi(name):
   print("hello", name)
 print_hi('Tom')
 ```
 
-```cpp
-// test
+```md
+~~~c++
 int main(void)
 {
   cin.tie(NULL);
   ios_base::sync_with_stdio(false);
 
   cout << PLUS;
+  return (0);
+}
+~~~
+```
 
+```c++
+int main(void)
+{
+  cin.tie(NULL);
+  ios_base::sync_with_stdio(false);
+
+  cout << PLUS;
   return (0);
 }
 ```
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
-[devinlife-md]: https://devinlife.com/howto%20github%20pages/markdown-syntax/
+\`\`\`와 \~\~\~ 둘 다 사용 가능하다.
+
+{%- comment -%}
+
+@@T Add
+
+### 주소 링크
+
+```md
+[](){:target="_blank"}
+[][]
+
+```
+
+{%- endcomment -%}
+
+### 이미지 링크
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 {% assign filename = page.path | replace: '_posts/', '' %}
 
