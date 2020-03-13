@@ -85,19 +85,13 @@ body {
 .page__content {
   h2 {
     padding-bottom: 0.5em;
-    border-top: 4px ridge $border-color;
     border-left: 4px ridge $border-color;
-    border-right: 4px ridge $border-color;
-	border-bottom: 4px ridge $border-color;
 	padding: 10px;
   }
 
   h3 {
     padding-bottom: 0.5em;
-	border-top: 1px dotted $border-color;
 	border-left: 1px dotted $border-color;
-	border-right: 1px dotted $border-color;
-	border-bottom: 1px dotted $border-color;
 	padding: 8px;
   }
 
