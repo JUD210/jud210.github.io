@@ -38,7 +38,7 @@ Today I Learned 형식으로 레포트를 작성하고 포스팅하려니 너무
 
 ## 참고
 
-- [GitHub Pages 블로그 따라하기](https://devinlife.com/howto/#1-github-pages-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0/){:target="_blank"}
-- [나만의 인터넷 주소 ─ 도메인을 구매하는 히치하이커를 위한 가이드](https://june.meson.kr/2018/07/various-things-with-your-own-domain.html){:target="_blank"}
-- [쉽고 빠르게 수준 급의 GitHub 블로그 만들기 - jekyll remote theme으로](https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html){:target="_blank"}
-- [Jekyll theme: minimal mistakes](https://github.com/mmistakes/minimal-mistakes){:target="_blank"}
+- [GitHub Pages 블로그 따라하기](https://devinlife.com/howto/#1-github-pages-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0/)
+- [나만의 인터넷 주소 ─ 도메인을 구매하는 히치하이커를 위한 가이드](https://june.meson.kr/2018/07/various-things-with-your-own-domain.html)
+- [쉽고 빠르게 수준 급의 GitHub 블로그 만들기 - jekyll remote theme으로](https://dreamgonfly.github.io/2018/01/27/jekyll-remote-theme.html)
+- [Jekyll theme: minimal mistakes](https://github.com/mmistakes/minimal-mistakes)
