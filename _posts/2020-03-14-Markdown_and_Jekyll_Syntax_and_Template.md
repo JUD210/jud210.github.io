@@ -1,6 +1,6 @@
 ---
 title:  "Markdown & Jekyll 문법 및 템플릿 정리"
-excerpt: "여러가지 문법 및 템플릿을 한데 모아놓아서 정리하였다."
+excerpt: "여러가지 문법 및 템플릿을 한데 모아서 정리하였다."
 tags:
   - Markdown
   - Jekyll
