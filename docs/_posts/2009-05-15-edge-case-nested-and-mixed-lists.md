@@ -62,5 +62,5 @@ Nested and mixed lists are an interesting beast. It's a corner case to make sure
 ### Task Lists
 
 - [x] Finish my changes
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+- [  ] Push my commits to GitHub
+- [  ] Open a pull request
