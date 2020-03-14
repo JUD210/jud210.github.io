@@ -412,7 +412,7 @@ int main(void)
 | 과자    |  900원  |    20개 |
 
 ```md
-- Don't recommend! Use table formatter
+- Don't recommend this! Use table formatter
 
 |항___목|가___격|개___수|
 |:-|:-:|-:|
@@ -420,7 +420,7 @@ int main(void)
 |과자|900원|20개|
 ```
 
-- Don't recommend! Use table formatter
+- Don't recommend this! Use table formatter
 
 |항___목|가___격|개___수|
 |:-|:-:|-:|
