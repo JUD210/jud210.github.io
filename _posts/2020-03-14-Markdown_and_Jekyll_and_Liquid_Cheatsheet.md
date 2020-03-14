@@ -13,7 +13,7 @@ tags:
 categories:
 - Markdown
 date: 2020-03-14 04:44:26 +0900
-last_modified_at: 2020-03-15 02:05:43 +0900
+last_modified_at: 2020-03-15 07:28:00 +0900
 ---
 {{ page.excerpt }}
 
@@ -94,14 +94,6 @@ ___굵고 기울게 (Bold & Italic)___
 ##### H5 예시
 
 ###### H6 예시
-
-### 한 줄 짜리 코드 인용 (One line code block)
-
-```md
-`그냥 강조 표시로 사용하기도 함`
-```
-
-`그냥 강조 표시로 사용하기도 함`
 
 ### 1.4. 정렬 목록 (Ordered list)
 
@@ -295,7 +287,15 @@ ___굵고 기울게 (Bold & Italic)___
 >> 인용문 2
 >>> 인용문 3
 
-### 1.10. 코드 인용 및 문법 강조 (Code block and Syntax highlighting)
+### 1.10. 한 줄 짜리 코드 인용 (One line code block)
+
+```md
+`그냥 강조 표시로 사용하기도 함`
+```
+
+`그냥 강조 표시로 사용하기도 함`
+
+### 1.11. 코드 인용 및 문법 강조 (Code block and Syntax highlighting)
 
 1\. (Good) \`\`\`
 
@@ -363,7 +363,7 @@ int main(void)
         }
     }
 
-### 1.11. 표 작성 (Create a table)
+### 1.12. 표 작성 (Create a table)
 
 ```md
 - 좌측 정렬 (Align left)
