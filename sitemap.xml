@@ -26,4 +26,5 @@
     </url>
   {% endfor %}
 </urlset>
-<!-- imported from https://github.com/gmlwjd9405/gmlwjd9405.github.io/blob/master/sitemap.xml -->
+<!-- Imported from https://github.com/gmlwjd9405/gmlwjd9405.github.io/blob/master/sitemap.xml -->
+<!-- Changed from {{ site.url }} to {{ site.url | replace: 'jud210.github.io', 'hyuk.kr'}} -->
