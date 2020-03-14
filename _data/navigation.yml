@@ -6,8 +6,9 @@ main:
   #   url: /sitemap/
   - title: "잉혁킹이란"
     url: /about/
-  - title: "다이어리"
-    url: /categories/diary/
+  # @@F localhost에선 되는데, github에선 안 된다..?
+  # - title: "다이어리"
+    # url: /categories/diary/
   - title: "카테고리"
     url: /categories/
   - title: "태그"
