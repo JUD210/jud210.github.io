@@ -22,8 +22,9 @@ title                    : "개발자_잉혁킹_성장기.blog"
 title_separator          : "_"
 subtitle                 : "Since 2020.02.26"
 name                     : "Hyuk Min"
-description              : "42서울 1기 개발자 잉혁킹의 '공부 노트', 'TIL: Today I Learned', '강좌' 등을 올리는 기술 블로그"
-url                      : "https://jud210.github.io"
+description              : "42서울 1기 개발자 잉혁킹의 기술 블로그"
+# url                      : "https://jud210.github.io"
+url                      : "https://hyuk.kr"
 baseurl                  : ""
 # 프로젝트 별 페이지를 만들 때 baseurl은 /projectname처럼 써야 합니다.
 # 이렇게 두어야 https://yourname.github.io/projectname의 url로 접속할 수 있습니다.
@@ -119,7 +120,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/bio-photo.jpg"
+# Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
