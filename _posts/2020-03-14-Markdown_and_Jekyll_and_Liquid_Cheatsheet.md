@@ -24,8 +24,6 @@ last_modified_at: 2020-03-14 18:53:34 +0900
 
 ## 1. 마크다운 문법 및 템플릿 정리<br>　(Markdown cheatsheet: syntax and template)
 
-- 마크다운은 **[이 블로그][devinlife-md]**에서 많은 부분 참고하여 정리했다.
-
 ### 1.1. 줄바꿈 (Newline)
 
 ```md
@@ -105,7 +103,197 @@ ___굵고 기울게 (Bold & Italic)___
 
 `그냥 강조 표시로 사용하기도 함`
 
-### 1.4. 코드 인용 (Code block)
+### 1.4. 정렬 목록 (Ordered list)
+
+```md
+(Good)  
+
+1. C
+2. C++
+3. Java
+4. Python
+```
+
+(Good)
+
+1. C
+2. C++
+3. Java
+4. Python
+
+```md
+(Bad)
+
+0. 사실
+8. 이렇게 써도
+0. 결과는 같지만,
+3. 안 좋은 습관이다.
+```
+
+(Bad)
+
+0. 사실
+8. 이렇게 써도
+0. 결과는 같지만,
+3. 안 좋은 습관이다.
+
+### 1.5. 비정렬 목록 (Unordered list)
+
+```md
+(Recommended)
+
+- Python
+  - Conditional statement
+    - if
+```
+
+(Recommended)
+
+- Python
+  - Conditional statement
+    - if
+
+```md
++ Python
+  + Conditional statement
+    + if
+```
+
++ Python
+  + Conditional statement
+    + if
+
+```md
+* Python
+  * Conditional statement
+    * if
+```
+
+* Python
+  * Conditional statement
+    * if
+
+```md
+- Python
+  + Conditional statement
+    * if
+```
+
+- Python
+  + Conditional statement
+    * if
+
+### 1.6. 수평선 (Horizontal line)
+
+```md
+* * *
+***
+*****
+- - -
+---------------------------------------
+```
+
+* * *
+***
+*****
+- - -
+---------------------------------------
+
+### 1.7. 주소 링크 (URL link)
+
+```md
+- URL 자체 링크 (Bare URL link)
+  - <http://www.google.com>  
+
+- 이름 및 URL 링크
+  - [Inline-style link](https://www.google.com)
+  - [Reference-style link][Arbitrary case-insensitive reference text]
+  - [Relative reference to a repository file](../_posts/2020-03-14-Markdown_and_Jekyll_and_Liquid_Cheatsheet.md)
+
+[arbitrary case-insensitive reference text]: https://github.com/JUD210/
+
+- 새 탭으로 열기 (Open in new tab)
+  - <http://www.google.com>{:target="_blank"}
+  - [Inline-style link](https://www.google.com){:target="_blank"}
+```
+
+- URL 자체 링크 (Link bare-URL)
+  - <http://www.google.com>
+
+- 이름 및 URL 링크 (Link URL with name)
+  - [Inline-style link](https://www.google.com)
+  - [Reference-style link][Arbitrary case-insensitive reference text]
+  - [Relative reference to a repository file](../_posts/2020-03-14-Markdown_and_Jekyll_and_Liquid_Cheatsheet.md)
+
+[arbitrary case-insensitive reference text]: https://github.com/JUD210/
+
+- 새 탭으로 열기 (Open in new tab)
+  - <http://www.google.com>{:target="_blank"}
+  - [Inline-style link](https://www.google.com){:target="_blank"}
+
+### 1.8. 이미지 삽입 (Insert image)
+
+```md
+- Inline-style
+
+![Alternative Text](/assets/images/bio-photo-mini.jpg)
+
+- Inline-style 가운데 정렬 (Align center)
+
+![Alternative Text](/assets/images/bio-photo-mini.jpg){: .align-center}
+
+- Reference-style
+
+![Alternative Text][bio-photo-mini]
+
+[bio-photo-mini]: /assets/images/bio-photo-mini.jpg
+
+- 클릭 시 전체화면 (Click to view in fullscreen mode)
+
+[
+  ![Alternative Text](/assets/images/bio-photo-mini.jpg)
+](/assets/images/bio-photo-mini.jpg)
+```
+
+- Inline-style
+
+![Alternative Text](/assets/images/bio-photo-mini.jpg)
+
+- Inline-style 가운데 정렬 (Align center)
+
+![Alternative Text](/assets/images/bio-photo-mini.jpg){: .align-center}
+
+- Reference-style
+
+![Alternative Text][bio-photo-mini]
+
+[bio-photo-mini]: /assets/images/bio-photo-mini.jpg
+
+- 클릭 시 전체화면 (Click to view in fullscreen mode)
+
+[
+  ![Alternative Text](/assets/images/bio-photo-mini.jpg)
+](/assets/images/bio-photo-mini.jpg)
+
+### 1.9. 인용문 (Blockquote)
+
+```md
+> 인용문
+```
+
+> 인용문
+
+```md
+> 인용문 1
+>> 인용문 2
+>>> 인용문 3
+```
+
+> 인용문 1
+>> 인용문 2
+>>> 인용문 3
+
+### 1.10. 코드 인용 및 문법 강조 (Code block and Syntax highlighting)
 
 1\. (Good) \`\`\`
 
@@ -173,45 +361,6 @@ int main(void)
         }
     }
 
-<!-- 
-@@T Add Contents!
-
-### 주소 링크 (link)
-
-```md
-[]()  
-[](){:target="_blank"}  
-[][]
-
-```
-
-### 이미지 링크
-
-Advanced
-
-[
-![]({{ site.url }}/assets/images/posts/2020-03--TIL/.png)
-]({{ site.url }}/assets/images/posts/2020-03--TIL/.png)
- -->
-
-### 1.5. 인용문 (Blockquote)
-
-```md
-> 인용문
-```
-
-> 인용문
-
-```md
-> 인용문 1
->> 인용문 2
->>> 인용문 3
-```
-
-> 인용문 1
->> 인용문 2
->>> 인용문 3
-
 ## 2. Jekyll & Liquid 문법 및 템플릿 정리<br>　(Jekyll & Liquid cheatsheet: syntax and template)
 
 ### 2.1. 유튜브 동영상 삽입 (Insert a youtube video)
@@ -260,6 +409,7 @@ Advanced
   {% endif %}
 {% endfor %}
 
-<!-- Links -->
+## 참고 자료
 
-[devinlife-md]: <https://devinlife.com/howto%20github%20pages/markdown-syntax/>
+- [Markdown 문법 알아보기](https://devinlife.com/howto%20github%20pages/markdown-syntax)
+- [Markdown-Chatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
