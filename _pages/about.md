@@ -18,7 +18,7 @@ last_modified_at: 2020-03-15 01:45:23 +0900
   ![gyarados_hyperbeam](/assets/images/pages/about/gyarados_hyperbeam.gif)
 ](/assets/images/pages/about/gyarados_hyperbeam.gif)
 
-파닥파닥 잉혁킹은 오늘도 즐겁게 레벨업 중입니다.
+파닥파닥 **잉혁킹 (민 혁)**은 오늘도 즐겁게 레벨업 중입니다.
 
 [
   ![42seoul_ignite](/assets/images/pages/about/42seoul_ignite.png)

@@ -13,7 +13,7 @@ tags:
 categories:
 - Markdown
 date: 2020-03-14 04:44:26 +0900
-last_modified_at: 2020-03-14 18:53:34 +0900
+last_modified_at: 2020-03-15 02:05:43 +0900
 ---
 {{ page.excerpt }}
 
@@ -208,9 +208,10 @@ ___굵고 기울게 (Bold & Italic)___
 - 이름 및 URL 링크
   - [Inline-style link](https://www.google.com)
   - [Reference-style link][Arbitrary case-insensitive reference text]
-  - [Relative reference to a repository file](../_posts/2020-03-14-Markdown_and_Jekyll_and_Liquid_Cheatsheet.md)
+  - [Relative reference to a link](/markdown/Markdown_and_Jekyll_and_Liquid_Cheatsheet/)
+  - [Relative reference to a repository file](/assets/images/bio-photo-mini.jpg)
 
-[arbitrary case-insensitive reference text]: https://github.com/JUD210/
+[arbitrary case-insensitive reference text]: http://www.google.com
 
 - 새 탭으로 열기 (Open in new tab)
   - <http://www.google.com>{:target="_blank"}
@@ -223,9 +224,10 @@ ___굵고 기울게 (Bold & Italic)___
 - 이름 및 URL 링크 (Link URL with name)
   - [Inline-style link](https://www.google.com)
   - [Reference-style link][Arbitrary case-insensitive reference text]
-  - [Relative reference to a repository file](../_posts/2020-03-14-Markdown_and_Jekyll_and_Liquid_Cheatsheet.md)
+  - [Relative reference to a link](/markdown/Markdown_and_Jekyll_and_Liquid_Cheatsheet/)
+  - [Relative reference to a repository file](/assets/images/bio-photo-mini.jpg)
 
-[arbitrary case-insensitive reference text]: https://github.com/JUD210/
+[arbitrary case-insensitive reference text]: http://www.google.com
 
 - 새 탭으로 열기 (Open in new tab)
   - <http://www.google.com>{:target="_blank"}
