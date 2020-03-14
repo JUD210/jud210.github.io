@@ -51,10 +51,12 @@ baseurl                  : ""
 #
 ################################################################################
 
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+teaser                   : "/assets/images/bio-photo.jpg"
+# path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : "/assets/images/bio-photo-mini.jpg"
+# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
 comments:
   # provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
@@ -271,6 +273,8 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  # I added these
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -279,6 +283,8 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  # I added these
+  - jekyll-archives
 
 
 # Archives
@@ -298,16 +304,24 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - day
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    # I added these
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    ###############
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
