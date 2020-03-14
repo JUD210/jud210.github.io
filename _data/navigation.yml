@@ -6,6 +6,8 @@ main:
   #   url: /sitemap/
   - title: "잉혁킹이란"
     url: /about/
+  - title: "다이어리"
+    url: /categories/diary/
   - title: "카테고리"
     url: /categories/
   - title: "태그"
