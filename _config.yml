@@ -51,7 +51,8 @@ baseurl                  : ""
 #
 ################################################################################
 
-teaser                   : "/assets/images/bio-photo.jpg"
+teaser                   :
+# teaser                   : "/assets/images/bio-photo.jpg"
 # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/bio-photo-mini.jpg"
 # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
