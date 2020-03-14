@@ -346,6 +346,9 @@ defaults:
       comments: true
       share: true
       related: true
+      toc: true
+      toc_sticky: true
+      toc_label: "목차"
 
   # _pages
   - scope:
@@ -358,3 +361,6 @@ defaults:
       comments: false
       share: true
       related: false
+      toc: true
+      toc_sticky: true
+      toc_label: "목차"
