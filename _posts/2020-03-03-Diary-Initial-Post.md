@@ -10,7 +10,7 @@ tags:
 categories:
   - Diary
 date: 2020-03-04 00:09:52 +0900
-last_modified_at: 2020-03-14 06:36:35 +0900
+last_modified_at: 2020-03-14 16:54:40 +0900
 ---
 {{ page.excerpt }}
 
@@ -35,6 +35,14 @@ last_modified_at: 2020-03-14 06:36:35 +0900
 Today I Learned 형식으로 레포트를 작성하고 포스팅하려니 너무 오랜 시간을 빼앗기는 것 같다. 어차피 애초에 레포트 작성은 42서울 지원금을 받기 위한 형식적인 절차이지 않은가. 짧게 작성해도 그만인데다가, 내용도 난잡하여 포스팅 거리가 되지 못 한다.
 
 그러므로, 여태까지 올린 TIL 글은 전부 삭제하고, 지금부터는 공부한 내용을 짤막하게 정리하여 올리는 식으로 바꿔야겠다.
+
+## 2020-03-14 16:37:01 +0900
+
+동영상을 삽입하는 간단한 방법도 알아내었다. 정말 대단하다는 말 밖에 나오지 않는다ㅋㅋ 너무 맘에 든다.
+
+어떻게 삽입했는지 궁금하다면 [이 글]({{ site.url }}/markdown/Markdown_and_Jekyll_Syntax_and_Template/#%EC%9C%A0%ED%8A%9C%EB%B8%8C-%EB%8F%99%EC%98%81%EC%83%81-%EC%82%BD%EC%9E%85-insert-a-youtube-video)을 참조하길 바란다.
+
+{% include video id="Gp43FNXxymU" provider="youtube" %}
 
 ## 참고
 
