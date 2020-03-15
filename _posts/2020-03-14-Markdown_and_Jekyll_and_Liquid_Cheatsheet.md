@@ -229,46 +229,42 @@ ___굵고 기울게 (Bold & Italic)___
 ### 1.8. 이미지 삽입 (Insert image)
 
 ```md
-- Inline-style
-
+- 이미지 삽입
+  - Inline-style 
 ![Alternative Text](/assets/images/bio-photo-mini.jpg)
-
-- Inline-style 가운데 정렬 (Align center)
-
+  - Inline-style 가운데 정렬 (Align center) by Jekyll
 ![Alternative Text](/assets/images/bio-photo-mini.jpg){: .align-center}
-
-- Reference-style
-
+  - Reference-style
 ![Alternative Text][bio-photo-mini]
 
 [bio-photo-mini]: /assets/images/bio-photo-mini.jpg
 
 - 클릭 시 전체화면 (Click to view in fullscreen mode)
-
+  - Inline-style
 [
   ![Alternative Text](/assets/images/bio-photo-mini.jpg)
 ](/assets/images/bio-photo-mini.jpg)
+  - Reference-style 
+[![Alternative Text][bio-photo-mini]][bio-photo-mini]
 ```
 
-- Inline-style
-
+- 이미지 삽입
+  - Inline-style 
 ![Alternative Text](/assets/images/bio-photo-mini.jpg)
-
-- Inline-style 가운데 정렬 (Align center)
-
+  - Inline-style 가운데 정렬 (Align center) by Jekyll
 ![Alternative Text](/assets/images/bio-photo-mini.jpg){: .align-center}
-
-- Reference-style
-
+  - Reference-style
 ![Alternative Text][bio-photo-mini]
 
 [bio-photo-mini]: /assets/images/bio-photo-mini.jpg
 
 - 클릭 시 전체화면 (Click to view in fullscreen mode)
-
+  - Inline-style
 [
   ![Alternative Text](/assets/images/bio-photo-mini.jpg)
 ](/assets/images/bio-photo-mini.jpg)
+  - Reference-style 
+[![Alternative Text][bio-photo-mini]][bio-photo-mini]
 
 ### 1.9. 인용문 (Blockquote)
 
@@ -332,7 +328,7 @@ int main(void)
 ~~~
 ```
 
-```c++
+~~~c++
 #include <iostream>
 using namespace std;
 
@@ -344,7 +340,7 @@ int main(void)
     cout << "Hello!";  // Hello!
     return (0);
 }
-```
+~~~
 
 3\. (Bad: No syntax highlighting) 4 spaces or 1 tab
 
