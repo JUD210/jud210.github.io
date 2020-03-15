@@ -4,6 +4,7 @@ excerpt: "잉혁킹이란 무엇을 의미하고, 저는 누구인지에 대해 
 permalink: /about/
 date: 2020-03-15 01:10:26 +0900
 last_modified_at: 2020-03-15 17:11:01 +0900
+layout: single
 read_time: true
 ---
 

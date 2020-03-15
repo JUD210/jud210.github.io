@@ -134,10 +134,13 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
+  provider               : "custom" # google-gtag & naver
+   # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : UA-160657280-1
     anonymize_ip         : false # (default)
+  naver:
+    tracking_id          : 7d6ada1701e46
 
 
 # Site Author
@@ -357,10 +360,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
-      comments: false
+      read_time: false #
+      comments: false #
       share: true
-      related: false
+      related: false #
       toc: true
       toc_sticky: true
       toc_label: "목차"
