@@ -266,7 +266,23 @@ ___굵고 기울게 (Bold & Italic)___
   - Reference-style 
 [![Alternative Text][bio-photo-mini]][bio-photo-mini]
 
-### 1.9. 인용문 (Blockquote)
+### 1.9. 각주 (Footnote)
+
+```md
+각주1 [^1], 각주2 [^2]
+
+[^1]: 테스트 1
+[^2]: 테스트 2
+```
+
+<!-- @@T 각주를 이쁘게 꾸미고 싶다면 [이 글]() 참고 -->
+
+각주1 [^1], 각주2 [^2]
+
+[^1]: 테스트 1
+[^2]: 테스트 2
+
+### 1.10. 인용문 (Blockquote)
 
 ```md
 > 인용문
@@ -284,15 +300,17 @@ ___굵고 기울게 (Bold & Italic)___
 >> 인용문 2
 >>> 인용문 3
 
-### 1.10. 한 줄 짜리 코드 인용 (One line code block)
+### 1.11. 한 줄 짜리 코드 인용 (One line code block)
 
 ```md
-`그냥 강조 표시로 사용하기도 함`
+A single<br>line break  
+`A single<br>line break`  
 ```
 
-`그냥 강조 표시로 사용하기도 함`
+A single<br>line break  
+`A single<br>line break`  
 
-### 1.11. 코드 인용 및 문법 강조 (Code block and Syntax highlighting)
+### 1.12. 코드 인용 및 문법 강조 (Code block and Syntax highlighting)
 
 1\. (Good) \`\`\`
 
@@ -360,7 +378,7 @@ int main(void)
         }
     }
 
-### 1.12. 표 작성 (Create a table)
+### 1.13. 표 작성 (Create a table)
 
 ```md
 - 좌측 정렬 (Align left)
