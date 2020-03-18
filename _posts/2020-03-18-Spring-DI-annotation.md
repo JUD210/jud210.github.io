@@ -12,7 +12,7 @@ last_modified_at: 2020-03-19 02:54:28 +0900
 ---
 {{ page.excerpt }}
 
-## 의존객제 자동 주입 (Automatic Dependency Injection)
+## 의존객체 자동 주입 (Automatic Dependency Injection)
 
 - 스프링 설정파일에서 `<constructor-arg>` 혹은 `<property>` 태그로 의존 객체 대상을 명시하지 않아도 스프링 컨테이너가 자동적으로 의존 대상 객체를 찾아 해당 객체에 필요한 의존성을 주입하는 것을 말한다.
 - 의존객체 자동 주입은 **@Autowired** / **@Resource** / **@Inject** 3개의 어노테이션을 활용하여 적용 가능하다.
