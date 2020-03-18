@@ -1,5 +1,5 @@
 ---
-title:  "블로그 시작! (GitHub Page + Jekyll)"
+title:  "[Diary] 블로그 시작! (GitHub Page + Jekyll)"
 excerpt: "GitHub Pages, Jekyll (minimal-mistakes), hosting.kr 이 세가지를 활용하여 개인 블로그를 만들었다."
 tags:
   - Blog

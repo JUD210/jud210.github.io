@@ -1,5 +1,5 @@
 ---
-title: "Markdown & Jekyll & Liquid Cheatsheet: 문법 및 템플릿 정리"
+title: "[Blog] Markdown & Jekyll & Liquid Cheatsheet: 문법 및 템플릿 정리"
 excerpt: "Markdown & Jekyll & Liquid의 문법 및 템플릿을 Cheatsheet 형식으로 한데 모아서 정리하였다."
 tags:
 - Markdown
@@ -11,7 +11,7 @@ tags:
 - Blog
 - GitHub Pages
 categories:
-- Markdown
+- Blog
 date: 2020-03-14 04:44:26 +0900
 last_modified_at: 2020-03-15 07:28:00 +0900
 ---
