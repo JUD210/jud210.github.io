@@ -11,6 +11,7 @@ date: 2020-03-18 21:40:56 +0900
 last_modified_at: 2020-03-19 02:54:28 +0900
 ---
 {{ page.excerpt }}
+* * *
 
 ## 의존객체 자동 주입 (Automatic Dependency Injection)
 
@@ -161,7 +162,7 @@ public class WordSearchServiceUseAutowired {
 |           |               @Autowired               |               @Resource                |                @Inject                 |
 | :-------: | :------------------------------------: | :------------------------------------: | :------------------------------------: |
 |   지원    |            Spring framework            |                Java EE                 |                Java EE                 |
-| 매칭 순위 | Type<br>Name<br>Qualifier<br>Exception | Name<br>Type<br>Qualifier<br>Exception | Type<br>Qualifier<br>Name<br>Exception |
+| 매칭  | Type<br>Name<br>Qualifier<br>Exception | Name<br>Type<br>Qualifier<br>Exception | Type<br>Qualifier<br>Name<br>Exception |
 
 ## 관련된 Post
 

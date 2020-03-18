@@ -16,6 +16,7 @@ date: 2020-03-14 04:44:26 +0900
 last_modified_at: 2020-03-15 07:28:00 +0900
 ---
 {{ page.excerpt }}
+* * *
 
 <!-- markdownlint-disable -->
 
