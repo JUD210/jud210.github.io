@@ -307,26 +307,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - year
-#     - month
-#     - day
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     # I added these
-#     year: '/:year/'
-#     month: '/:year/:month/'
-#     day: '/:year/:month/:day/'
-#     ###############
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
 
 # HTML Compression
 # - https://jch.penibelst.de/

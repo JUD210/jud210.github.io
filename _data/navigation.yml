@@ -18,14 +18,14 @@ main:
 
 # @@T 카테고리 글 갯수 ()로 표현하기
 sidebar_categories:
-  - title: Language
-    children:
-      - title: "C"
-        url: /categories/c/
-      - title: "C++"
-        url: /categories/cpp/
-      - title: "java"
-        url: /categories/java/
+  # - title: Language
+  #   children:
+  #     - title: "C"
+  #       url: /categories/c/
+  #     - title: "C++"
+  #       url: /categories/cpp/
+  #     - title: "java"
+  #       url: /categories/java/
   - title: Framework
     children:
       - title: "Spring"
