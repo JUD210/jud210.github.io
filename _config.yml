@@ -151,52 +151,46 @@ author:
   location         : "대한민국, 서울"
   email            : judicious210@gmail.com
   links:
-    # - label: "Email"
-      # icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:judicious210@gmail.com
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg"
+    - label: "Life RPG"
+      icon: "fas fa-fw fa-table"
+      url: "https://goo.gl/qnehEQ"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jud210"
-    - label: "YouTube"
-      icon: "fas fa-fw fa-link"
-      url: "https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+    - label: "Baekjoon Online Judge"
+      icon: "fas fa-fw fa-signal"
+      url: "https://www.acmicpc.net/user/judicious210"
+    # - label: "Twitter"
+      # icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+    # - label: "Facebook"
+      # icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+    # - label: "Instagram"
+      # icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
 # Site Footer
 footer:
   links:
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg"
+    - label: "Life RPG"
+      icon: "fas fa-fw fa-table"
+      url: "https://goo.gl/qnehEQ"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jud210"
-    - label: "YouTube"
-      icon: "fas fa-fw fa-link"
-      url: "https://www.youtube.com/channel/UCYPWzViA-uq9sBop7ssYaEg"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
-    # - label: "GitHub"
-      # icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+    - label: "Baekjoon Online Judge"
+      icon: "fas fa-fw fa-signal"
+      url: "https://www.acmicpc.net/user/judicious210"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:judicious210@gmail.com
 
 
 # Reading Files
