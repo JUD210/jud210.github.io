@@ -40,7 +40,7 @@ Today I Learned 형식으로 레포트를 작성하고 포스팅하려니 너무
 
 동영상을 삽입하는 간단한 방법도 알아내었다. 정말 대단하다는 말 밖에 나오지 않는다ㅋㅋ 너무 맘에 든다.
 
-어떻게 삽입했는지 궁금하다면 [이 글]({{ site.url }}/markdown/Markdown_and_Jekyll_and_Liquid_Cheatsheet/#21-%EC%9C%A0%ED%8A%9C%EB%B8%8C-%EB%8F%99%EC%98%81%EC%83%81-%EC%82%BD%EC%9E%85-insert-a-youtube-video)에 상세히 적혀있으니 참고하기 바란다.
+어떻게 삽입했는지 궁금하다면 [이 글]({{ site.baseurl }}{% post_url 2020-03-14-Markdown_and_Jekyll_and_Liquid_Cheatsheet %}/#21-%EC%9C%A0%ED%8A%9C%EB%B8%8C-%EB%8F%99%EC%98%81%EC%83%81-%EC%82%BD%EC%9E%85-insert-a-youtube-video)에 상세히 적혀있으니 참고하기 바란다.
 
 {% include video id="Gp43FNXxymU" provider="youtube" %}
 

@@ -436,7 +436,15 @@ int main(void)
 
 {% include video id="Gp43FNXxymU" provider="youtube" %}
 
-### 2.2. 변수 활용 (Use a variable)
+### 2.2. 포스트 링크 삽입 (Insert a link to a post)
+
+```liquid
+{% raw %}[Link this post]({{ site.baseurl }}{% post_url 2020-03-14-Markdown_and_Jekyll_and_Liquid_Cheatsheet %}){% endraw %}
+```
+
+[Link this post]({{ site.baseurl }}{% post_url 2020-03-14-Markdown_and_Jekyll_and_Liquid_Cheatsheet %})
+
+### 2.3. 변수 활용 (Use a variable)
 
 ```liquid
 {% raw %}{% assign file_path = page.path | replace: '_posts/', '' %}
@@ -450,7 +458,7 @@ int main(void)
 
 [gh-jud210-my_blog-this_post]: <https://raw.githubusercontent.com/JUD210/my_blog/master/_posts/{{ file_path }}>
 
-### 2.3. 반복문 및 조건문 활용 (Use Loop and Conditional)
+### 2.4. 반복문 및 조건문 활용 (Use Loop and Conditional)
 
 ```liquid
 {% raw %}{% assign target_time = "2020년 03월" %}
