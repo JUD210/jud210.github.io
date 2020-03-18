@@ -114,7 +114,7 @@ google:
 google_site_verification : _6sOtFfn5rxSKW4dwTvH36dYAVSu8c1GO_aU6oMW7Ao
 bing_site_verification   :
 yandex_site_verification :
-naver_site_verification  :
+naver_site_verification  : naver3cae6e7057b9c680662bb007a232cf68
 
 # Social Sharing
 twitter:
@@ -278,7 +278,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   # I added these
-  - jekyll-archives
+  # - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -288,7 +288,7 @@ whitelist:
   - jekyll-feed
   - jekyll-include-cache
   # I added these
-  - jekyll-archives
+  # - jekyll-archives
 
 
 # Archives
@@ -308,24 +308,24 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - day
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    # I added these
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    ###############
-    category: /categories/:name/
-    tag: /tags/:name/
+# jekyll-archives:
+#   enabled:
+#     - year
+#     - month
+#     - day
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     # I added these
+#     year: '/:year/'
+#     month: '/:year/:month/'
+#     day: '/:year/:month/:day/'
+#     ###############
+#     category: /categories/:name/
+#     tag: /tags/:name/
 
 
 # HTML Compression
@@ -352,6 +352,8 @@ defaults:
       toc: true
       toc_sticky: true
       toc_label: "목차"
+      sidebar:
+        nav: "sidebar_categories"
 
   # _pages
   - scope:
@@ -367,3 +369,5 @@ defaults:
       toc: true
       toc_sticky: true
       toc_label: "목차"
+      sidebar:
+        nav: "sidebar_categories"

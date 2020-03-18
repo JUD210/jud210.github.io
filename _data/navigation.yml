@@ -15,3 +15,26 @@ main:
     url: /tags/
   - title: "모든 글"
     url: /year-archive/
+
+# @@T 카테고리 글 갯수 ()로 표현하기
+sidebar_categories:
+  - title: Language
+    children:
+      - title: "C"
+        url: /categories/c/
+      - title: "C++"
+        url: /categories/cpp/
+      - title: "java"
+        url: /categories/java/
+  - title: Framework
+    children:
+      - title: "Spring"
+        url: /categories/spring/
+  - title: GitHub Page & Jekyll
+    children:
+      - title: "Blog"
+        url: /categories/blog/
+  - title: Thinking
+    children:
+      - title: "Diary"
+        url: /categories/diary/
