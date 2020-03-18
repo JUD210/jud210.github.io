@@ -160,8 +160,8 @@ public class WordSearchServiceUseAutowired {
 
 |             |               @Autowired               |               @Resource                |                @Inject                 |
 | :---------: | :------------------------------------: | :------------------------------------: | :------------------------------------: |
-|    지원     |            Spring framework            |                Java EE                 |          Java EE          도           |
-| 연결 우선도 | Type -> Name -> Qualifier -> Exception | Name -> Type -> Qualifier -> Exception | Type -> Qualifier -> Name -> Exception |
+|    지원     |            Spring framework            |                Java EE                 |                Java EE                 |
+| 연결 우선도 | Type<br>Name<br>Qualifier<br>Exception | Name<br>Type<br>Qualifier<br>Exception | Type<br>Qualifier<br>Name<br>Exception |
 
 ## 관련된 Post
 
