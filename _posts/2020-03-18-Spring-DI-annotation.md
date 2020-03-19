@@ -20,8 +20,10 @@ last_modified_at: 2020-03-19 17:19:47 +0900
 
 ## 의존객체 선택
 
-- 의존객체 자동 주입을 위해 어노테이션을 사용했을 때, 매칭되는 객체가 **2개 이상**인 경우, 스프링 컨테이너는 자동 주입 대상 객체를 판단하지 못해서 **Exception**을 발생시킨다. 이를 방지하기 위해 의존객체 선택이 필요하다.
+- 의존객체 자동 주입을 위해 어노테이션을 사용했을 때, 매칭되는 객체가 **2개 이상**인 경우, 스프링 컨테이너는 자동 주입 대상 객체를 판단하지 못해서 **Exception**[^1] 을 발생시킨다. 이를 방지하기 위해 의존객체 선택이 필요하다.
 - 의존객체 선택은 **@Qualifier** 및 **@Named** 2개의 어노테이션을 활용하여 적용 가능하다.
+
+[^1]: NoUniqueBeanDefinitionException
 
 ### @Qualifier
 
@@ -35,14 +37,11 @@ last_modified_at: 2020-03-19 17:19:47 +0900
 - @Inject 에 사용 가능
 - Java 표준으로 지원 (JSR 330)
 
-<!-- - 의존성이 주입 될 객체의 **이름** 및 **Qualifier 값** 을 지정할 수 있다.
-- Spring 프레임워크에서만 지원 -->
-
-> 참고: JSR 330 Standard Annotations: @Named and @Inject [^1]
+> 참고: JSR 330 Standard Annotations: @Named and @Inject [^2]
 >
 > JSR 330 @Named annotation is equivalent to spring @Component and @Inject is equivalent to spring @Autowired in spring container with some limitations. A bean annotated with @Named annotation is considered as a component in spring container. We can also provide a name to bean using @Named("anyName"). @Inject autowires the bean dependency and is supported in spring in the same way as @Autowired annotation.
 
-[^1]: 추후 시간이 나면 번역할 예정
+[^2]: 추후 시간이 나면 번역할 예정
 
 ## 의존객체 자동 주입 및 의존객체 선택 적용 예
 
