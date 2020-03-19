@@ -101,7 +101,7 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
-> example 3: OK: @Qualifier matched by qualifier value
+> example 3: OK: @Qualifier matched qualifier value
 
 ```xml
 <bean id="wordDao1" class="com.word.dao.WordDao" >
@@ -122,11 +122,11 @@ public class WordSearchServiceUseAutowired {
     // Type -> Name -> @Qualifier -> Exception
     // Type 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
     // Name 매칭 결과: 없음
-    // Qualifier 매칭 결과: wordDao1 (1개: 특정 완료)
+    // @Qualifier 매칭 결과: wordDao1 (1개: 특정 완료)
 }
 ```
 
-> example 4: OK: @Qualifier matched by id, but **NOT** recommended!
+> example 4: OK: @Qualifier matched id, but **NOT** recommended!
 
 ```xml
 <bean id="wordDao1" class="com.word.dao.WordDao" />
@@ -145,7 +145,7 @@ public class WordSearchServiceUseAutowired {
     // Type -> Name -> @Qualifier -> Exception
     // Type 매칭 결과: wordDao, wordDao2, wordDao3 (3개)
     // Name 매칭 결과: 없음
-    // Qualifier 매칭 결과: wordDao1 (1개: 특정 완료)
+    // @Qualifier 매칭 결과: wordDao1 (1개: 특정 완료)
 }
 ```
 
@@ -167,7 +167,7 @@ public class WordSearchServiceUseAutowired {
     // Type -> Name -> @Qualifier -> Exception
     // Type 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
     // Name 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
-    // Qualifier 매칭 결과: 없음
+    // @Qualifier 매칭 결과: 없음
     // Exception!
 }
 ```
@@ -194,25 +194,7 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
-> example 2: OK: Name matched
-
-```xml
-<bean id="wordDaoTest" class="com.word.dao.WordDao" />
-<bean id="wordDaoReal" class="com.word.dao.WordDao" />
-
-<bean id="registerService" class="com.word.service.WordRegisterService" />
-```
-
-```java
-public class WordSearchServiceUseAutowired {
-    @Resource
-    @Named("wordDaoTest")
-    private WordDao wordDao;
-    ...
-}
-```
-
-> example 3: OK: Designated name matched
+> example 2: OK: Designated name matched
 
 ```xml
 <bean id="wordDaoTest" class="com.word.dao.WordDao" />
@@ -291,6 +273,7 @@ public class WordSearchServiceUseAutowired {
 
 ```xml
 <bean id="usedDao" class="com.word.dao.WordDao" />
+
 <bean id="registerService" class="com.word.service.WordRegisterService" />
 ```
 
@@ -314,23 +297,6 @@ public class WordSearchServiceUseAutowired {
 ```java
 public class WordSearchServiceUseAutowired {
     @Inject
-    private WordDao wordDao;
-    ...
-}
-```
-
-> example 4: OK: Name matched
-
-```xml
-<bean id="wordDao" class="com.word.dao.WordDao" />
-
-<bean id="registerService" class="com.word.service.WordRegisterService" />
-```
-
-```java
-public class WordSearchServiceUseAutowired {
-    @Inject
-    @Named("wordDao")
     private WordDao wordDao;
     ...
 }
