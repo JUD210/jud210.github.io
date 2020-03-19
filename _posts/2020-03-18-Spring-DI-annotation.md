@@ -20,13 +20,36 @@ last_modified_at: 2020-03-19 17:19:47 +0900
 
 ## 의존객체 선택
 
-- 의존객체 자동 주입을 위해 어노테이션을 사용했을 때, 매칭되는 객체가 **2개 이상**인 경우, 스프링 컨테이너는 자동 주입 대상 객체를 판단하지 못해서 **Exception**을 발생시킨다.
-- 이를 방지하기 위해 **@Qualifier** 어노테이션을 사용하여 의존성이 주입 될 객체의 **아이디**나 **이름**을 지정할 수 있다.
+- 의존객체 자동 주입을 위해 어노테이션을 사용했을 때, 매칭되는 객체가 **2개 이상**인 경우, 스프링 컨테이너는 자동 주입 대상 객체를 판단하지 못해서 **Exception**을 발생시킨다. 이를 방지하기 위해 의존객체 선택이 필요하다.
+- 의존객체 선택은 **@Qualifier** 및 **@Named** 2개의 어노테이션을 활용하여 적용 가능하다.
+
+### @Qualifier
+
+- 의존성이 주입 될 객체의 **이름** 및 **Qualifier 값** 을 지정할 수 있다.
+- @Autowired / @Resource 에 사용 가능
+- Spring 프레임워크에서만 지원
+
+### @Named
+
+- 의존성이 주입 될 객체의 **이름**을 지정할 수 있다.
+- @Inject 에 사용 가능
+- Java 표준으로 지원 (JSR 330)
+
+<!-- - 의존성이 주입 될 객체의 **이름** 및 **Qualifier 값** 을 지정할 수 있다.
+- Spring 프레임워크에서만 지원 -->
+
+> 참고: JSR 330 Standard Annotations: @Named and @Inject [^1]
+>
+> JSR 330 @Named annotation is equivalent to spring @Component and @Inject is equivalent to spring @Autowired in spring container with some limitations. A bean annotated with @Named annotation is considered as a component in spring container. We can also provide a name to bean using @Named("anyName"). @Inject autowires the bean dependency and is supported in spring in the same way as @Autowired annotation.
+
+[^1]: 추후 시간이 나면 번역할 예정
+
+## 의존객체 자동 주입 및 의존객체 선택 적용 예
 
 ### @Autowired
 
 - 주입하려고 하는 객체(bean)의 타입이 일치하는지를 찾고 객체를 자동으로 주입한다.
-- Type -> Name -> Qualifier -> Exception
+- Type -> Name -> @Qualifier -> Exception
   - 만약 타입이 일치하는 객체가 없다면, @Autowired 아래에 위치한 속성명과 일치하는 bean을 컨테이너에서 찾는다. 
   - 만약 이름이 일치하는 객체가 없다면, @Qualifier 어노테이션의 유무를 찾아 그 어노테이션이 붙은 속성에 의존성을 주입한다.
   - 만약 Qualifier 값과 일치하는 대상이 없다면, Exception을 발생시킨다.
@@ -72,13 +95,13 @@ public class WordSearchServiceUseAutowired {
     @Autowired
     private WordDao wordDao;
     ...
-    // Type -> Name -> Qualifier -> Exception
+    // Type -> Name -> @Qualifier -> Exception
     // Type 매칭 결과: wordDao, wordDao2, wordDao3 (3개)
     // Name 매칭 결과: wordDao (1개: 특정 완료)
 }
 ```
 
-> example 3: OK: Qualifier matched by qualifier value
+> example 3: OK: @Qualifier matched by qualifier value
 
 ```xml
 <bean id="wordDao1" class="com.word.dao.WordDao" >
@@ -96,14 +119,14 @@ public class WordSearchServiceUseAutowired {
     @Qualifier("usedDao")
     private WordDao wordDao;
     ...
-    // Type -> Name -> Qualifier -> Exception
+    // Type -> Name -> @Qualifier -> Exception
     // Type 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
     // Name 매칭 결과: 없음
     // Qualifier 매칭 결과: wordDao1 (1개: 특정 완료)
 }
 ```
 
-> example 4: OK: Qualifier matched by id, but **NOT** recommended!
+> example 4: OK: @Qualifier matched by id, but **NOT** recommended!
 
 ```xml
 <bean id="wordDao1" class="com.word.dao.WordDao" />
@@ -119,7 +142,7 @@ public class WordSearchServiceUseAutowired {
     @Qualifier("wordDao1")
     private WordDao wordDao;
     ...
-    // Type -> Name -> Qualifier -> Exception
+    // Type -> Name -> @Qualifier -> Exception
     // Type 매칭 결과: wordDao, wordDao2, wordDao3 (3개)
     // Name 매칭 결과: 없음
     // Qualifier 매칭 결과: wordDao1 (1개: 특정 완료)
@@ -141,7 +164,7 @@ public class WordSearchServiceUseAutowired {
     @Autowired
     private WordDao wordDao;
     ...
-    // Type -> Name -> Qualifier -> Exception
+    // Type -> Name -> @Qualifier -> Exception
     // Type 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
     // Name 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
     // Qualifier 매칭 결과: 없음
@@ -152,10 +175,10 @@ public class WordSearchServiceUseAutowired {
 ### @Resource
 
 - 이름을 기준으로 객체를 찾는다. 만일 이름이 존재하지 않는다면 타입을 기준으로 자동적으로 객체를 찾아 주입한다. 마지막으로 @Qualifier 어노테이션의 유무를 판별한 후 그 어노테이션이 붙은 속성을 주입한다.
-- Name -> Type -> Qualifier -> Exception
+- Name -> Type -> @Qualifier -> Exception
 - Java EE(Enterprise Edition) 기본 지원
 
-> example 1: OK
+> example 1: OK: Name matched
 
 ```xml
 <bean id="wordDao" class="com.word.dao.WordDao" />
@@ -171,7 +194,7 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
-> example 2: OK
+> example 2: OK: Name matched
 
 ```xml
 <bean id="wordDaoTest" class="com.word.dao.WordDao" />
@@ -183,13 +206,13 @@ public class WordSearchServiceUseAutowired {
 ```java
 public class WordSearchServiceUseAutowired {
     @Resource
-    @Qualifier("usedDao")
+    @Named("wordDaoTest")
     private WordDao wordDao;
     ...
 }
 ```
 
-> example 3: OK
+> example 3: OK: Designated name matched
 
 ```xml
 <bean id="wordDaoTest" class="com.word.dao.WordDao" />
@@ -206,14 +229,49 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
+> example 3: OK: Type matched
+
+```xml
+<bean id="no_name" class="com.word.dao.WordDao" />
+
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
+    @Resource
+    private WordDao wordDao;
+    ...
+}
+```
+
+> example 4: OK: @Qualifier matched
+
+```xml
+<bean id="wordDaoTest" class="com.word.dao.WordDao" />
+  <qualifier value="usedDao">
+<bean id="wordDaoReal" class="com.word.dao.WordDao" />
+
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
+    @Resource
+    @Qualifier("usedDao")
+    private WordDao wordDao;
+    ...
+}
+```
+
 ### @Inject
 
 - @Autowired와 흡사하나, 자동 주입할 bean객체를 찾는 순서가 다르다.
 - 실무에서는 @Qualifier 어노테이션을 통해 명시적으로 어느 bean객체를 어느 속성에다 주입할 것인지를 명시하는 것이 올바른 습관이기에, 굳이 사용할 필요가 있을지는 의문.
-- Type -> Qualifier -> Name -> Exception
+- Type -> @Named -> Name -> Exception
 - Java EE(Enterprise Edition) 기본 지원
 
-> example: OK
+> example 1: OK: Type matched
 
 ```xml
 <bean id="wordDao" class="com.word.dao.WordDao" />
@@ -229,12 +287,61 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
+> example 2: OK: @Named matched
+
+```xml
+<bean id="usedDao" class="com.word.dao.WordDao" />
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
+    @Inject
+    @Named("usedDao")
+    private WordDao wordDao;
+    ...
+}
+```
+
+> example 3: OK: Name matched
+
+```xml
+<bean id="wordDao" class="com.word.dao.WordDao" />
+
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
+    @Inject
+    private WordDao wordDao;
+    ...
+}
+```
+
+> example 4: OK: Name matched
+
+```xml
+<bean id="wordDao" class="com.word.dao.WordDao" />
+
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
+    @Inject
+    @Named("wordDao")
+    private WordDao wordDao;
+    ...
+}
+```
+
 ### 비교표
 
-|           |               @Autowired               |               @Resource                |                @Inject                 |
-| :-------: | :------------------------------------: | :------------------------------------: | :------------------------------------: |
-|   지원    |            Spring framework            |                Java EE                 |                Java EE                 |
-| 매칭  | Type<br>Name<br>Qualifier<br>Exception | Name<br>Type<br>Qualifier<br>Exception | Type<br>Qualifier<br>Name<br>Exception |
+|           |               @Autowired                |                @Resource                |               @Inject               |
+| :-------: | :-------------------------------------: | :-------------------------------------: | :---------------------------------: |
+|   지원    |            Spring framework             |                 Java EE                 |               Java EE               |
+| 매칭 순서 | Type<br>Name<br>@Qualifier<br>Exception | Name<br>Type<br>@Qualifier<br>Exception | Type<br>@Named<br>Name<br>Exception |
 
 ## 관련된 Post
 
