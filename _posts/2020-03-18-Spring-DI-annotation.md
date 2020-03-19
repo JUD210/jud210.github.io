@@ -35,7 +35,7 @@ last_modified_at: 2020-03-19 17:19:47 +0900
 
 - 의존성이 주입 될 객체의 **이름**을 지정할 수 있다.
 - @Inject 에 사용 가능
-- Java 표준으로 지원 (JSR 330)
+- Java 표준 (JSR 330)
 
 > 참고: JSR 330 Standard Annotations: @Named and @Inject [^2]
 >
@@ -100,7 +100,7 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
-> example 3: OK: @Qualifier matched qualifier value
+> example 3: OK (Recommended): @Qualifier matched qualifier value!
 
 ```xml
 <bean id="wordDao1" class="com.word.dao.WordDao" >
@@ -125,7 +125,7 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
-> example 4: OK: @Qualifier matched id, but **NOT** recommended!
+> example 4: OK (**NOT** recommended): @Qualifier matched id
 
 ```xml
 <bean id="wordDao1" class="com.word.dao.WordDao" />
@@ -165,7 +165,7 @@ public class WordSearchServiceUseAutowired {
     ...
     // Type -> Name -> @Qualifier -> Exception
     // Type 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
-    // Name 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
+    // Name 매칭 결과: 없음
     // @Qualifier 매칭 결과: 없음
     // Exception!
 }
@@ -175,7 +175,7 @@ public class WordSearchServiceUseAutowired {
 
 - 이름을 기준으로 객체를 찾는다. 만일 이름이 존재하지 않는다면 타입을 기준으로 자동적으로 객체를 찾아 주입한다. 마지막으로 @Qualifier 어노테이션의 유무를 판별한 후 그 어노테이션이 붙은 속성을 주입한다.
 - Name -> Type -> @Qualifier -> Exception
-- Java EE(Enterprise Edition) 기본 지원
+- Java 표준 (JSR 330)
 
 > example 1: OK: Name matched
 
@@ -226,7 +226,7 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
-> example 4: OK: @Qualifier matched
+> example 4: OK (Recommended): @Qualifier matched
 
 ```xml
 <bean id="wordDaoTest" class="com.word.dao.WordDao" />
@@ -248,9 +248,9 @@ public class WordSearchServiceUseAutowired {
 ### @Inject
 
 - @Autowired와 흡사하나, 자동 주입할 bean객체를 찾는 순서가 다르다.
-- 실무에서는 @Qualifier 어노테이션을 통해 명시적으로 어느 bean객체를 어느 속성에다 주입할 것인지를 명시하는 것이 올바른 습관이기에, 굳이 사용할 필요가 있을지는 의문.
+- 실무에서는 @Autowired + @Qualifier 어노테이션을 통해 명시적으로 어느 bean객체를 어느 속성에다 주입할 것인지를 명시하는 것이 일반적이기에, @Inject를 굳이 사용할 필요는 없을 듯.
 - Type -> @Named -> Name -> Exception
-- Java EE(Enterprise Edition) 기본 지원
+- Java 표준 (JSR 330)
 
 > example 1: OK: Type matched
 
@@ -268,7 +268,7 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
-> example 2: OK: @Named matched
+> example 2: OK (Recommended): @Named matched
 
 ```xml
 <bean id="usedDao" class="com.word.dao.WordDao" />
@@ -305,7 +305,7 @@ public class WordSearchServiceUseAutowired {
 
 |           |               @Autowired                |                @Resource                |               @Inject               |
 | :-------: | :-------------------------------------: | :-------------------------------------: | :---------------------------------: |
-|   지원    |            Spring framework             |                 Java EE                 |               Java EE               |
+|   지원    |            Spring framework             |                Java 표준                |              Java 표준              |
 | 매칭 순서 | Type<br>Name<br>@Qualifier<br>Exception | Name<br>Type<br>@Qualifier<br>Exception | Type<br>@Named<br>Name<br>Exception |
 
 ## 관련된 Post
