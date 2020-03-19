@@ -13,7 +13,7 @@ tags:
 categories:
 - Blog
 date: 2020-03-14 04:44:26 +0900
-last_modified_at: 2020-03-15 07:28:00 +0900
+last_modified_at: 2020-03-19 16:48:42 +0900
 ---
 {{ page.excerpt }}
 * * *
@@ -477,7 +477,7 @@ int main(void)
 
 [gh-jud210-my_blog-this_post]: <https://raw.githubusercontent.com/JUD210/my_blog/master/_posts/{{ file_path }}>
 
-### 2.4. 반복문 및 조건문 활용 (Use Loop and Conditional)
+### 2.4. 반복문 및 조건문 활용 (Use Loop and Conditional statements)
 
 ```liquid
 {% raw %}{% assign target_time = "2020년 03월" %}

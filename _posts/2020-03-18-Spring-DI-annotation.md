@@ -8,7 +8,7 @@ tags:
 categories:
   - Spring
 date: 2020-03-18 21:40:56 +0900
-last_modified_at: 2020-03-19 02:54:28 +0900
+last_modified_at: 2020-03-19 17:19:47 +0900
 ---
 {{ page.excerpt }}
 * * *
@@ -20,7 +20,7 @@ last_modified_at: 2020-03-19 02:54:28 +0900
 
 ## 의존객체 선택
 
-- 의존객체 자동 주입을 위해 어노테이션을 사용했을 때, 의존성 주입 대상이 되는 객체를 **단 하나**로 특정할 수 없다면, Exception이 뜨게 된다.
+- 의존객체 자동 주입을 위해 어노테이션을 사용했을 때, 매칭되는 객체가 **2개 이상**인 경우, 스프링 컨테이너는 자동 주입 대상 객체를 판단하지 못해서 **Exception**을 발생시킨다.
 - 이를 방지하기 위해 **@Qualifier** 어노테이션을 사용하여 의존성이 주입 될 객체의 **아이디**나 **이름**을 지정할 수 있다.
 
 ### @Autowired
@@ -32,18 +32,20 @@ last_modified_at: 2020-03-19 02:54:28 +0900
   - 만약 Qualifier 값과 일치하는 대상이 없다면, Exception을 발생시킨다.
 - Spring 프레임워크에서만 지원
 
-> example 1: OK
+> example 1: OK: Type matched
 
 ```xml
+<!-- Manual Dependency Injection: constructor-arg 활용
 <bean id="wordDao" class="com.word.dao.WordDao" />
 
-<!-- Manual Dependency Injection: constructor-arg 활용
 <bean id="registerService" class="com.word.service.WordRegisterService">
   <constructor-arg ref="wordDao" />
 </bean> 
 -->
 
 <!-- Automatic Dependency Injection: Annotation 활용 -->
+<bean id="wordDao" class="com.word.dao.WordDao" />
+
 <bean id="registerService" class="com.word.service.WordRegisterService" />
 ```
 
@@ -55,26 +57,7 @@ public class WordSearchServiceUseAutowired {
 }
 ```
 
-> example 2: OK
-
-```xml
-<bean id="wordDao1" class="com.word.dao.WordDao" />
-<bean id="wordDao2" class="com.word.dao.WordDao" />
-<bean id="wordDao3" class="com.word.dao.WordDao" />
-
-<bean id="registerService" class="com.word.service.WordRegisterService" />
-```
-
-```java
-public class WordSearchServiceUseAutowired {
-    @Autowired
-    @Qualifier("wordDao1")
-    private WordDao wordDao;
-    ...
-}
-```
-
-> example 3: OK, but **NOT** recommended!
+> example 2: OK: Name matched, but **NOT** recommended!
 
 ```xml
 <bean id="wordDao" class="com.word.dao.WordDao" />
@@ -90,8 +73,79 @@ public class WordSearchServiceUseAutowired {
     private WordDao wordDao;
     ...
     // Type -> Name -> Qualifier -> Exception
-    // Type 매칭 결과: wordDao, wordDao1, wordDao2 (3개)
+    // Type 매칭 결과: wordDao, wordDao2, wordDao3 (3개)
     // Name 매칭 결과: wordDao (1개: 특정 완료)
+}
+```
+
+> example 3: OK: Qualifier matched by qualifier value
+
+```xml
+<bean id="wordDao1" class="com.word.dao.WordDao" >
+  <qualifier value="usedDao">
+<bean />
+<bean id="wordDao2" class="com.word.dao.WordDao" />
+<bean id="wordDao3" class="com.word.dao.WordDao" />
+
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
+    @Autowired
+    @Qualifier("usedDao")
+    private WordDao wordDao;
+    ...
+    // Type -> Name -> Qualifier -> Exception
+    // Type 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
+    // Name 매칭 결과: 없음
+    // Qualifier 매칭 결과: wordDao1 (1개: 특정 완료)
+}
+```
+
+> example 4: OK: Qualifier matched by id, but **NOT** recommended!
+
+```xml
+<bean id="wordDao1" class="com.word.dao.WordDao" />
+<bean id="wordDao2" class="com.word.dao.WordDao" />
+<bean id="wordDao3" class="com.word.dao.WordDao" />
+
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
+    @Autowired
+    @Qualifier("wordDao1")
+    private WordDao wordDao;
+    ...
+    // Type -> Name -> Qualifier -> Exception
+    // Type 매칭 결과: wordDao, wordDao2, wordDao3 (3개)
+    // Name 매칭 결과: 없음
+    // Qualifier 매칭 결과: wordDao1 (1개: 특정 완료)
+}
+```
+
+> example 5: KO!: Nothing matched
+
+```xml
+<bean id="wordDao1" class="com.word.dao.WordDao" />
+<bean id="wordDao2" class="com.word.dao.WordDao" />
+<bean id="wordDao3" class="com.word.dao.WordDao" />
+
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
+    @Autowired
+    private WordDao wordDao;
+    ...
+    // Type -> Name -> Qualifier -> Exception
+    // Type 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
+    // Name 매칭 결과: wordDao1, wordDao2, wordDao3 (3개)
+    // Qualifier 매칭 결과: 없음
+    // Exception!
 }
 ```
 
@@ -128,6 +182,24 @@ public class WordSearchServiceUseAutowired {
 
 ```java
 public class WordSearchServiceUseAutowired {
+    @Resource
+    @Qualifier("usedDao")
+    private WordDao wordDao;
+    ...
+}
+```
+
+> example 3: OK
+
+```xml
+<bean id="wordDaoTest" class="com.word.dao.WordDao" />
+<bean id="wordDaoReal" class="com.word.dao.WordDao" />
+
+<bean id="registerService" class="com.word.service.WordRegisterService" />
+```
+
+```java
+public class WordSearchServiceUseAutowired {
     @Resource(name="wordDaoTest")
     private WordDao wordDao;
     ...
@@ -141,7 +213,7 @@ public class WordSearchServiceUseAutowired {
 - Type -> Qualifier -> Name -> Exception
 - Java EE(Enterprise Edition) 기본 지원
 
-> example
+> example: OK
 
 ```xml
 <bean id="wordDao" class="com.word.dao.WordDao" />
