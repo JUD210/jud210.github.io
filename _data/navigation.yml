@@ -6,7 +6,6 @@ main:
   #   url: /sitemap/
   - title: "잉혁킹이란"
     url: /about/
-  # @@F localhost에선 되는데, github에선 안 된다..?
   # - title: "다이어리"
     # url: /categories/diary/
   - title: "카테고리"
@@ -16,7 +15,6 @@ main:
   - title: "모든 글"
     url: /year-archive/
 
-# @@T 카테고리 글 갯수 ()로 표현하기
 sidebar_categories:
   # - title: Language
   #   children:

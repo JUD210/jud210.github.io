@@ -33,7 +33,7 @@ last_modified_at: 2020-03-19 16:48:42 +0900
 마크다운에서는 이런식으로
 써도 줄바꿈이 되지 않는다.
 
-줄 끝에 스페이스를 2번  
+줄 끝에 스페이스를 2번
 붙여야 1칸 줄바꿈이 되고,
 
 이런식으로 완전히
@@ -44,7 +44,7 @@ last_modified_at: 2020-03-19 16:48:42 +0900
 마크다운에서는 이런식으로
 써도 줄바꿈이 되지 않는다.
 
-줄 끝에 스페이스를 2번  
+줄 끝에 스페이스를 2번
 붙여야 1칸 줄바꿈이 되고,
 
 이런식으로 완전히
@@ -54,23 +54,23 @@ last_modified_at: 2020-03-19 16:48:42 +0900
 ### 1.2. 강조 표시 (Font style)
 
 ```md
-*기울게 (Italic)*  
-**굵게 (Bold)**  
+*기울게 (Italic)*
+**굵게 (Bold)**
 ***굵고 기울게 (Bold & Italic)***
 
-_기울게 (Italic)_  
-__굵게 (Bold)__  
+_기울게 (Italic)_
+__굵게 (Bold)__
 ___굵고 기울게 (Bold & Italic)___
 
 ~~취소선 (Strikethrough)~~
 ```
 
-*기울게 (Italic)*  
-**굵게 (Bold)**  
+*기울게 (Italic)*
+**굵게 (Bold)**
 ***굵고 기울게 (Bold & Italic)***
 
-_기울게 (Italic)_  
-__굵게 (Bold)__  
+_기울게 (Italic)_
+__굵게 (Bold)__
 ___굵고 기울게 (Bold & Italic)___
 
 ~~취소선 (Strikethrough)~~
@@ -101,7 +101,7 @@ ___굵고 기울게 (Bold & Italic)___
 ### 1.4. 정렬 목록 (Ordered list)
 
 ```md
-(Good)  
+(Good)
 
 1. C
 2. C++
@@ -197,7 +197,7 @@ ___굵고 기울게 (Bold & Italic)___
 
 ```md
 - URL 자체 링크 (Bare URL link)
-  - <http://www.google.com>  
+  - <http://www.google.com>
 
 - 이름 및 URL 링크
   - [Inline-style link](https://www.google.com)
@@ -231,7 +231,7 @@ ___굵고 기울게 (Bold & Italic)___
 
 ```md
 - 이미지 삽입
-  - Inline-style 
+  - Inline-style
 ![Alternative Text](/assets/images/bio-photo-mini.jpg)
   - Inline-style 가운데 정렬 (Align center) by Jekyll
 ![Alternative Text](/assets/images/bio-photo-mini.jpg){: .align-center}
@@ -245,12 +245,12 @@ ___굵고 기울게 (Bold & Italic)___
 [
   ![Alternative Text](/assets/images/bio-photo-mini.jpg)
 ](/assets/images/bio-photo-mini.jpg)
-  - Reference-style 
+  - Reference-style
 [![Alternative Text][bio-photo-mini]][bio-photo-mini]
 ```
 
 - 이미지 삽입
-  - Inline-style 
+  - Inline-style
 ![Alternative Text](/assets/images/bio-photo-mini.jpg)
   - Inline-style 가운데 정렬 (Align center) by Jekyll
 ![Alternative Text](/assets/images/bio-photo-mini.jpg){: .align-center}
@@ -264,7 +264,7 @@ ___굵고 기울게 (Bold & Italic)___
 [
   ![Alternative Text](/assets/images/bio-photo-mini.jpg)
 ](/assets/images/bio-photo-mini.jpg)
-  - Reference-style 
+  - Reference-style
 [![Alternative Text][bio-photo-mini]][bio-photo-mini]
 
 ### 1.9. 각주 (Footnote)
@@ -275,8 +275,6 @@ ___굵고 기울게 (Bold & Italic)___
 [^1]: 테스트 1
 [^2]: 테스트 2
 ```
-
-<!-- @@T 각주를 이쁘게 꾸미고 싶다면 [이 글]() 참고 -->
 
 각주1 [^1], 각주2 [^2]
 
@@ -304,12 +302,12 @@ ___굵고 기울게 (Bold & Italic)___
 ### 1.11. 한 줄 짜리 코드 인용 (One line code block)
 
 ```md
-A single<br>line break  
-`A single<br>line break`  
+A single<br>line break
+`A single<br>line break`
 ```
 
-A single<br>line break  
-`A single<br>line break`  
+A single<br>line break
+`A single<br>line break`
 
 ### 1.12. 코드 인용 및 문법 강조 (Code block and Syntax highlighting)
 
